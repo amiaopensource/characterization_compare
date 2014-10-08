@@ -42,18 +42,39 @@ def mediainfo_file(filename):
 
     # ===============
     # Mediainfo attributes
-    mediainfo_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
-    mediainfo_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
-    mediainfo_audio_track = ['codec_name', 'codec_tag_string', 'sample_rate', 'bits_per_sample', 'channels']
+    mediainfo_format = ['Format', 'Format_Profile', 'FileSize', 'Duration_String', 'OverallBitRate_String']
+    mediainfo_video_track = ['Format', 'CodecID', 'Format_Profile', 'DisplayAspectRatio', 'FrameRate', 'ChromaSubsampling', 'Resolution', 'ColorSpace']
+    mediainfo_audio_track = ['Format', 'CodecID', 'Format_Profile', 'SamplingRate', 'AudioBitsPerSample', 'Channel_s_']
 
-    for elem in root.iterfind('format'):
-    	for item in ffprobe_format:
-    		print item + ": " + elem.attrib[item]
-
+    for file in root.iterfind('File'):
+    	for track in file.iterfind('track'):
+    	    if track.attrib['type'] == "General":
+    	        print "\n=======> container"
+    	        for item in mediainfo_format:
+    	            try:
+    	                print item + ": " + track.find(item).text
+    	            except AttributeError:
+    	                print item + ": N/A"
+    	    if track.attrib['type'] == "Video":
+    	        print "\n=======> video stream(s)"
+    	        for item in mediainfo_video_track:
+    	            try:
+    	                print item + ": " + track.find(item).text
+    	            except AttributeError:
+    	                print item + ": N/A"
+    	    if track.attrib['type'] == "Audio":
+    	        print "\n=======> audio stream(s)"
+    	        for item in mediainfo_audio_track:
+    	            try:
+    	                print item + ": " + track.find(item).text
+    	            except AttributeError:
+    	                print item + ": N/A"
+    	            
 print "---------------------------------------"
 print "FFPROBE output"
 probe_file(args.input)
 print "---------------------------------------"
+print "Mediainfo output"
 mediainfo_file(args.input)
 print "container",ffprobe_format
 print "video",ffprobe_video_track
