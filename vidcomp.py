@@ -17,6 +17,7 @@ c = csv.writer(open(csv_path, "wb"))
 ffprobe_format_master = []
 ffprobe_video_track_master = []
 ffprobe_audio_track_master = []
+ffprobe_version = []
 # ===============
 # Mediainfo attributes
 mediainfo_format_master = []
@@ -52,7 +53,11 @@ def probe_file(filename):
     p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err =  p.communicate()
     root = ET.fromstring(out)
-
+    
+    for program in root.iter('program_version'):
+        ffprobe_version.append(program.attrib['version'])
+    
+    
     for elem in root.iterfind('format'):
         ffprobe_format = {'format_long_name':None, 'size':None, 'duration':None, 'bit_rate':None}
         for item in ffprobe_format:
@@ -130,21 +135,21 @@ mediainfo_file(args.input)
 c.writerow(["","File Format","File Size","Duration","Overall bitrate"])
 for i in range(0,len(mediainfo_format_master)):
     ffList = ffprobe_format_master[i]
-    c.writerow(["ffprobe",ffList['format_long_name'],ffList['size'],ffList['duration'],ffList['bit_rate']])
+    c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['format_long_name'],ffList['size'],ffList['duration'],ffList['bit_rate']])
     miList = mediainfo_format_master[i]
     c.writerow(["Media Info (" + mediainfo_version[0] + ")",miList['Format'],miList['FileSize'],miList['Duration_String'],miList['OverallBitRate_String']])
     c.writerow("")
 for i in range(0,len(mediainfo_video_track_master)):
     c.writerow(["Video track " + str(i + 1),"Video Codec","Codec ID","Codec Profile","Display Aspect Ratio","Frame Rate","Chroma Subsamplling","Bit Depth","Colorspace","Pixel format"])
     ffList = ffprobe_video_track_master[i]
-    c.writerow(["ffprobe",ffList['codec_name'],ffList['codec_tag_string'],ffList['profile'],ffList['display_aspect_ratio'],ffList['r_frame_rate'],ffList['pix_fmt']])
+    c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['codec_name'],ffList['codec_tag_string'],ffList['profile'],ffList['display_aspect_ratio'],ffList['r_frame_rate'],ffList['pix_fmt']])
     miList = mediainfo_video_track_master[i]
     c.writerow(["Media Info (" + mediainfo_version[0] + ")" ,miList['Format'],miList['CodecID'],miList['Format_Profile'],miList['DisplayAspectRatio'],miList['FrameRate'],miList['ChromaSubsampling'],miList['Resolution'],miList['ColorSpace']])
     c.writerow("")
 for i in range(0,len(mediainfo_audio_track_master)):
     c.writerow(["Audio track " + str(i + 1),"Audio Codec","Codec ID","Codec Profile","Sampling rate","Bit Depth","Number of Channels"])
     ffList = ffprobe_audio_track_master[i]
-    c.writerow(["ffprobe",ffList['codec_name'],ffList['codec_tag_string'],'N/A',ffList['sample_rate'],ffList['bits_per_sample'],ffList['channels']])
+    c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['codec_name'],ffList['codec_tag_string'],'N/A',ffList['sample_rate'],ffList['bits_per_sample'],ffList['channels']])
     miList = mediainfo_audio_track_master[i]
     c.writerow(["Media Info (" + mediainfo_version[0] + ")",miList['Format'],miList['CodecID'],miList['Format_Profile'],miList['SamplingRate'],miList['AudioBitsPerSample'],miList['Channel_s_']])
     c.writerow("")
