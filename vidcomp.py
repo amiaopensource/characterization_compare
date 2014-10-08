@@ -9,13 +9,13 @@ parser = argparse.ArgumentParser(description="Python tool for comparing the outp
 parser.add_argument('-i', '--input', type=str, required=True, help='The full path to the file you want to analyze.')
 args = parser.parse_args()
 
-def get_version():
-	cmd = ['ffprobe', '-version']
-	p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	out = p.communicate()
-	print out[:15]
+# def get_version():
+# 	cmd = ['ffprobe', '-version']
+# 	p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+# 	out = p.communicate()
+# 	print out[:15]
 
-get_version()
+# get_version()
 
 def probe_file(filename):
     cmnd = ['ffprobe', '-show_format', '-show_streams', '-show_error', '-show_versions', '-print_format', 'xml', filename]
@@ -26,23 +26,23 @@ def probe_file(filename):
     # ===============
     # FFPROBE attributes
     ffprobe_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
-<<<<<<< HEAD
-    ffprobe_
-=======
     ffprobe_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
     ffprobe_audio_track = ['codec_name', 'codec_tag_string', 'sample_rate', 'bits_per_sample', 'channels']
->>>>>>> FETCH_HEAD
 
     for elem in root.iterfind('format'):
+        print "\n=======> container"
     	for item in ffprobe_format:
     		print item + ": " + elem.attrib[item]
 
     for stream in root.iter('stream'):
     	if stream.attrib['codec_type'] == "video":
-	    	for item in ffprobe_video_track:
+            print "\n=======> video stream(s)"
+            for item in ffprobe_video_track:
 	    		print item + ": " + stream.attrib[item]
-
-probe_file(args.input)
+        elif stream.attrib['codec_type'] == "audio":
+            print "\n=======> audio stream(s)"
+            for item in ffprobe_audio_track:
+                print item + ": " + stream.attrib[item]
 
 def mediainfo_file(filename):
     cmnd = ['mediainfo', '-f', '--language=raw', '--Output=XML', filename]
@@ -60,5 +60,8 @@ def mediainfo_file(filename):
     	for item in ffprobe_format:
     		print item + ": " + elem.attrib[item]
 
-
+print "---------------------------------------"
+print "FFPROBE output"
+probe_file(args.input)
+print "---------------------------------------"
 mediainfo_file(args.input)
