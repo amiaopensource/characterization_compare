@@ -3,6 +3,8 @@
 import argparse, os, subprocess, csv
 from subprocess import call
 import xml.etree.ElementTree as ET
+from helpers import Search
+import json
 
 parser = argparse.ArgumentParser(description="Python tool for comparing the output of video characterization tools")
 parser.add_argument('-i', '--input', type=str, required=True, help='The full path to the file you want to analyze.')
@@ -24,6 +26,9 @@ mediainfo_video_track_master = []
 mediainfo_audio_track_master = []
 mediainfo_version = ''
 
+exiftool_format = {'file_format': None, 'file_size': None, 'duration': None, 'overall_bitrate': None}
+exiftool_video_track = {'codec': None, 'codec_profile': None, 'dar': None, 'width': None, 'height': None, 'frame_rate': None, 'chroma_subsample': None, 'bit_depth': None, 'colorspace': None, 'pixel_format': None}
+exiftool_audio_track = {'codec': None, 'codec_profile': None, 'sampling_rate': None, 'bit_depth': None, 'number_channels': None}
 # ===============
 # EXIFTOOL attributes
 '''
@@ -43,7 +48,74 @@ def exif_file(filename):
         print "qsdf"
 
 exif_file(args.input)
+
 '''
+
+def exif_file(filename, format, video, audio):
+    exiftool_check_cmd = ['exiftool', '-j', filename]
+    s = subprocess.Popen(exiftool_check_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    exiftool_out, err = s.communicate()
+
+    exiftool_list = json.loads(exiftool_out)
+    exiftool_dict = {}
+
+    if len(exiftool_list) > 0:
+        exiftool_dict = exiftool_list[0]
+        # exiftool_format = {'file_format': None, 'file_size': None, 'duration': None, 'overall_bitrate': None}
+        # exiftool_video_track = {'codec': None, 'codec_profile': None, 'dar': None, 'width': None, 'height': None, 'frame_rate': None, 'chroma_subsample': None, 'bit_depth': None, 'colorspace': None, 'pixel_format': None}
+        # exiftool_audio_track = {'codec': None, 'codec_profile': None, 'sampling_rate': None, 'bit_depth': None, 'number_channels': None}
+
+    #format
+    format['file_format'] = Search.search_dict(exiftool_dict, 'FileType')
+    format['file_size'] = Search.search_dict(exiftool_dict, 'MovieDataSize')
+    format['duration'] = Search.search_dict(exiftool_dict, 'Duration')
+    format['overall_bitrate'] = Search.search_dict(exiftool_dict, 'AvgBitrate')
+
+    #video
+    video['codec'] = Search.search_dict(exiftool_dict, 'CompressorID')
+    video['codec_profile'] = None
+    video['dar'] = Search.search_dict(exiftool_dict, 'PresentationAspectRatio')
+    video['width'] = Search.search_dict(exiftool_dict, 'ImageWidth')
+    video['height'] = Search.search_dict(exiftool_dict, 'ImageHeight')
+    video['frame_rate'] = Search.search_dict(exiftool_dict, 'VideoFrameRate')
+    video['chroma_subsample'] = None
+    video['bit_depth'] = Search.search_dict(exiftool_dict, 'BitDepth')
+    video['color_space'] = None
+    video['pixel_format'] = None
+
+    #audio
+    audio['codec'] = Search.search_dict(exiftool_dict, 'AudioFormat')
+    audio['sampling_rate'] = Search.search_dict(exiftool_dict, 'AudioSampleRate')
+    audio['bit_depth'] = Search.search_dict(exiftool_dict, 'AudioBitsPerSample')
+    if len(audio['bit_depth']) == 0:
+        audio['bit_depth'] = Search.search_dict(exiftool_dict, 'BitsPerAudioSample')
+    audio['number_channels'] = Search.search_dict(exiftool_dict, 'AudioChannels')
+    if len(audio['number_channels']) == 0:
+        audio['number_channels'] = Search.search_dict(exiftool_dict, 'ChannelCount')
+
+    for k,v in video.iteritems():
+        if v is not None:
+            if len(v) > 0:
+                video[k] = v[0]
+            else:
+                video[k] = None
+
+    for k,v in audio.iteritems():
+        if v is not None:
+            if len(v) > 0:
+                audio[k] = v[0]
+            else:
+                audio[k] = None
+
+    for k,v in format.iteritems():
+        if v is not None:
+            if len(v) > 0:
+                format[k] = v[0]
+            else:
+                format[k] = None
+
+    return format, video, audio
+
 
 def probe_file(filename):
     cmnd = ['ffprobe', '-show_format', '-show_streams', '-show_error', '-show_versions', '-print_format', 'xml', filename]
@@ -103,7 +175,7 @@ def mediainfo_file(filename):
     	        mediainfo_audio_track_master.append(mediainfo_audio_track)
     	        
     	            
-    	            
+
 print "---------------------------------------"
 print "FFPROBE output"
 probe_file(args.input)
@@ -120,6 +192,13 @@ mediainfo_file(args.input)
 print "container",mediainfo_format_master
 print "video",mediainfo_video_track_master
 print "audio",mediainfo_audio_track_master
+
+print "---------------------------------------"
+print "Exiftool output"
+exiftool_format, exiftool_video_track, exiftool_audio_track = exif_file(args.input, exiftool_format, exiftool_video_track, exiftool_audio_track)
+print "container",exiftool_format
+print "video",exiftool_video_track
+print "audio",exiftool_audio_track
 
 
 c.writerow(["","File Format","File Size","Duration","Overall bitrate"])
