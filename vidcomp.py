@@ -111,12 +111,6 @@ print "container",ffprobe_format
 print "video",ffprobe_video_track
 print "audio",ffprobe_audio_track
 
-
-
-
-print "container",ffprobe_format
-print "video",ffprobe_video_track
-print "audio",ffprobe_audio_track
 print "---------------------------------------"
 print "Mediainfo output"
 mediainfo_file(args.input)
@@ -130,8 +124,14 @@ c.writerow(["ffprobe",ffprobe_format['format_long_name'],ffprobe_format['size'],
 for i in range(1,len(mediainfo_format_master)):
     miList = mediainfo_format_master[i]
     c.writerow(["Media Info",miList['Format'],miList['FileSize'],miList['Duration_String'],miList['OverallBitRate_String']])
+c.writerow("")
+c.writerow(["Video track 1","Video Codec","Codec ID","Codec Profile","Display Aspect Ratio","Frame Rate","Chroma Subsamplling","Bit Depth","Colorspace","Pixel format"])
+c.writerow(["ffprobe",ffprobe_video_track['codec_name'],ffprobe_video_track['codec_tag_string'],ffprobe_video_track['profile'],ffprobe_video_track['display_aspect_ratio'],ffprobe_video_track['r_frame_rate'],ffprobe_video_track['pix_fmt']])
+for i in range(1,len(mediainfo_video_track_master)):
+    miList = mediainfo_video_track_master[i]
+    c.writerow(["Media Info",miList['Format'],miList['CodecID'],miList['Format_Profile'],miList['DisplayAspectRatio'],miList['FrameRate'],miList['ChromaSubsampling'],miList['Resolution'],miList['ColorSpace']])
 
- 
+
 
 '''
 
