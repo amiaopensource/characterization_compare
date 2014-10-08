@@ -54,7 +54,7 @@ def mediainfo_file(filename):
     # Mediainfo attributes
     mediainfo_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
     mediainfo_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
-    mediainfo_audio_track = []
+    mediainfo_audio_track = ['codec_name', 'codec_tag_string', 'sample_rate', 'bits_per_sample', 'channels']
 
     for elem in root.iterfind('format'):
     	for item in ffprobe_format:
