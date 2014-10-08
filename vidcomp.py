@@ -45,6 +45,8 @@ def exif_file(filename):
 exif_file(args.input)
 '''
 
+
+
 def probe_file(filename):
     cmnd = ['ffprobe', '-show_format', '-show_streams', '-show_error', '-show_versions', '-print_format', 'xml', filename]
     p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
