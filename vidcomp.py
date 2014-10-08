@@ -45,6 +45,8 @@ def exif_file(filename):
 exif_file(args.input)
 '''
 
+
+
 def probe_file(filename):
     cmnd = ['ffprobe', '-show_format', '-show_streams', '-show_error', '-show_versions', '-print_format', 'xml', filename]
     p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -133,6 +135,8 @@ c.writerow(["ffprobe",ffprobe_video_track['codec_name'],ffprobe_video_track['cod
 for i in range(1,len(mediainfo_video_track_master)):
     miList = mediainfo_video_track_master[i]
     c.writerow(["Media Info",miList['Format'],miList['CodecID'],miList['Format_Profile'],miList['DisplayAspectRatio'],miList['FrameRate'],miList['ChromaSubsampling'],miList['Resolution'],miList['ColorSpace']])
+c.writerow("")
+
 c.writerow(["Audio track 1","Audio Codec","Codec ID","Codec Profile","Sampling rate","Bit Depth","Number of Channels"])
 c.writerow(["ffprobe",ffprobe_audio_track['codec_name'],ffprobe_audio_track['codec_tag_string'],'N/A',ffprobe_audio_track['sample_rate'],ffprobe_audio_track['bits_per_sample'],ffprobe_audio_track['channels']])
 for i in range(1,len(mediainfo_audio_track_master)):
