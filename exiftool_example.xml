@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+
+<rdf:Description rdf:about='/Users/ben/Desktop/drmc_vid_test.mp4'
+  xmlns:et='http://ns.exiftool.ca/1.0/' et:toolkit='Image::ExifTool 9.65'
+  xmlns:ExifTool='http://ns.exiftool.ca/ExifTool/1.0/'
+  xmlns:System='http://ns.exiftool.ca/File/System/1.0/'
+  xmlns:File='http://ns.exiftool.ca/File/1.0/'
+  xmlns:QuickTime='http://ns.exiftool.ca/QuickTime/QuickTime/1.0/'
+  xmlns:Track1='http://ns.exiftool.ca/QuickTime/Track1/1.0/'
+  xmlns:Track2='http://ns.exiftool.ca/QuickTime/Track2/1.0/'
+  xmlns:Composite='http://ns.exiftool.ca/Composite/1.0/'>
+ <ExifTool:ExifToolVersion>9.65</ExifTool:ExifToolVersion>
+ <System:FileName>drmc_vid_test.mp4</System:FileName>
+ <System:Directory>/Users/ben/Desktop</System:Directory>
+ <System:FileSize>13 MB</System:FileSize>
+ <System:FileModifyDate>2014:09:22 06:10:22-04:00</System:FileModifyDate>
+ <System:FileAccessDate>2014:10:08 12:33:17-04:00</System:FileAccessDate>
+ <System:FileInodeChangeDate>2014:09:22 06:10:22-04:00</System:FileInodeChangeDate>
+ <System:FilePermissions>rw-r--r--</System:FilePermissions>
+ <File:FileType>MP4</File:FileType>
+ <File:MIMEType>video/mp4</File:MIMEType>
+ <QuickTime:MajorBrand>MP4 v2 [ISO 14496-14]</QuickTime:MajorBrand>
+ <QuickTime:MinorVersion>0.0.0</QuickTime:MinorVersion>
+ <QuickTime:CompatibleBrands>
+  <rdf:Bag>
+   <rdf:li>mp42</rdf:li>
+   <rdf:li>isom</rdf:li>
+  </rdf:Bag>
+ </QuickTime:CompatibleBrands>
+ <QuickTime:MovieHeaderVersion>0</QuickTime:MovieHeaderVersion>
+ <QuickTime:CreateDate>2014:09:22 10:09:32</QuickTime:CreateDate>
+ <QuickTime:ModifyDate>2014:09:22 10:10:22</QuickTime:ModifyDate>
+ <QuickTime:TimeScale>1000</QuickTime:TimeScale>
+ <QuickTime:Duration>0:01:15</QuickTime:Duration>
+ <QuickTime:PreferredRate>1</QuickTime:PreferredRate>
+ <QuickTime:PreferredVolume>100.00%</QuickTime:PreferredVolume>
+ <QuickTime:MatrixStructure>1 0 0 0 1 0 0 0 1</QuickTime:MatrixStructure>
+ <QuickTime:PreviewTime>0 s</QuickTime:PreviewTime>
+ <QuickTime:PreviewDuration>0 s</QuickTime:PreviewDuration>
+ <QuickTime:PosterTime>0 s</QuickTime:PosterTime>
+ <QuickTime:SelectionTime>0 s</QuickTime:SelectionTime>
+ <QuickTime:SelectionDuration>0 s</QuickTime:SelectionDuration>
+ <QuickTime:CurrentTime>0 s</QuickTime:CurrentTime>
+ <QuickTime:NextTrackID>3</QuickTime:NextTrackID>
+ <QuickTime:MovieDataSize>13559378</QuickTime:MovieDataSize>
+ <QuickTime:MovieDataOffset>41466</QuickTime:MovieDataOffset>
+ <Track1:TrackHeaderVersion>0</Track1:TrackHeaderVersion>
+ <Track1:TrackCreateDate>2014:09:22 10:09:32</Track1:TrackCreateDate>
+ <Track1:TrackModifyDate>2014:09:22 10:10:22</Track1:TrackModifyDate>
+ <Track1:TrackID>1</Track1:TrackID>
+ <Track1:TrackDuration>0:01:15</Track1:TrackDuration>
+ <Track1:TrackLayer>0</Track1:TrackLayer>
+ <Track1:TrackVolume>0.00%</Track1:TrackVolume>
+ <Track1:MatrixStructure>1 0 0 0 1 0 0 0 1</Track1:MatrixStructure>
+ <Track1:ImageWidth>1342</Track1:ImageWidth>
+ <Track1:ImageHeight>748</Track1:ImageHeight>
+ <Track1:MediaHeaderVersion>0</Track1:MediaHeaderVersion>
+ <Track1:MediaCreateDate>2014:09:22 10:09:32</Track1:MediaCreateDate>
+ <Track1:MediaModifyDate>2014:09:22 10:10:22</Track1:MediaModifyDate>
+ <Track1:MediaTimeScale>3000</Track1:MediaTimeScale>
+ <Track1:MediaDuration>0:01:15</Track1:MediaDuration>
+ <Track1:MediaLanguageCode>und</Track1:MediaLanguageCode>
+ <Track1:HandlerType>Video Track</Track1:HandlerType>
+ <Track1:GraphicsMode>srcCopy</Track1:GraphicsMode>
+ <Track1:OpColor>0 0 0</Track1:OpColor>
+ <Track1:CompressorID>avc1</Track1:CompressorID>
+ <Track1:SourceImageWidth>1342</Track1:SourceImageWidth>
+ <Track1:SourceImageHeight>748</Track1:SourceImageHeight>
+ <Track1:XResolution>72</Track1:XResolution>
+ <Track1:YResolution>72</Track1:YResolution>
+ <Track1:CompressorName>JVT/AVC Coding</Track1:CompressorName>
+ <Track1:BitDepth>24</Track1:BitDepth>
+ <Track1:ColorRepresentation>nclc 1 1 1</Track1:ColorRepresentation>
+ <Track1:VideoFrameRate>30</Track1:VideoFrameRate>
+ <Track2:TrackHeaderVersion>0</Track2:TrackHeaderVersion>
+ <Track2:TrackCreateDate>2014:09:22 10:09:32</Track2:TrackCreateDate>
+ <Track2:TrackModifyDate>2014:09:22 10:09:35</Track2:TrackModifyDate>
+ <Track2:TrackID>2</Track2:TrackID>
+ <Track2:TrackDuration>0:01:15</Track2:TrackDuration>
+ <Track2:TrackLayer>0</Track2:TrackLayer>
+ <Track2:TrackVolume>100.00%</Track2:TrackVolume>
+ <Track2:MatrixStructure>1 0 0 0 1 0 0 0 1</Track2:MatrixStructure>
+ <Track2:MediaHeaderVersion>0</Track2:MediaHeaderVersion>
+ <Track2:MediaCreateDate>2014:09:22 10:09:32</Track2:MediaCreateDate>
+ <Track2:MediaModifyDate>2014:09:22 10:09:35</Track2:MediaModifyDate>
+ <Track2:MediaTimeScale>44100</Track2:MediaTimeScale>
+ <Track2:MediaDuration>0:01:15</Track2:MediaDuration>
+ <Track2:MediaLanguageCode>und</Track2:MediaLanguageCode>
+ <Track2:HandlerType>Audio Track</Track2:HandlerType>
+ <Track2:Balance>0</Track2:Balance>
+ <Track2:AudioFormat>mp4a</Track2:AudioFormat>
+ <Track2:AudioChannels>2</Track2:AudioChannels>
+ <Track2:AudioBitsPerSample>16</Track2:AudioBitsPerSample>
+ <Track2:AudioSampleRate>44100</Track2:AudioSampleRate>
+ <Composite:AvgBitrate>1.44 Mbps</Composite:AvgBitrate>
+ <Composite:ImageSize>1342x748</Composite:ImageSize>
+ <Composite:Rotation>0</Composite:Rotation>
+</rdf:Description>
+</rdf:RDF>
