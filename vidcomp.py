@@ -126,7 +126,7 @@ print "audio",mediainfo_audio_track_master
 
 c.writerow(["","File Format","File Size","Duration","Overall bitrate"])
 c.writerow(["ffprobe",ffprobe_format['format_long_name'],ffprobe_format['size'],ffprobe_format['duration'],ffprobe_format['bit_rate']])
-c.writerow(["Media Info",mediainfo_format_master['Format'],ffprobe_format['FileSize'],ffprobe_format['Duration_String'],ffprobe_format['OverallBitRate_String']])
+# c.writerow(["Media Info",mediainfo_format_master['Format'],ffprobe_format['FileSize'],ffprobe_format['Duration_String'],ffprobe_format['OverallBitRate_String']])
 
 
 '''
