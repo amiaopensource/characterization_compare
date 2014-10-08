@@ -124,8 +124,9 @@ def mediainfo_file(filename):
     	            
         
 #print "---------------------------------------"
-#print "FFPROBE output"
+print "Running FFprobe Analysis..."
 probe_file(args.input)
+print "Done!"
 #print "---------------------------------------"
  
 #print "container",ffprobe_format_master
@@ -133,14 +134,15 @@ probe_file(args.input)
 #print "audio",ffprobe_audio_track_master
 
 #print "---------------------------------------"
-#print "Mediainfo output"
+print "Running Mediainfo Analysis..."
 mediainfo_file(args.input)
+print "Done!"
 #print mediainfo_version[0]
 #print "container",mediainfo_format_master
 #print "video",mediainfo_video_track_master
 #print "audio",mediainfo_audio_track_master
 
-
+print "Generating CSV Report..."
 c.writerow(["","File Format","File Size","Duration","Overall bitrate"])
 for i in range(0,len(mediainfo_format_master)):
     ffList = ffprobe_format_master[i]
@@ -164,4 +166,4 @@ for i in range(0,len(mediainfo_audio_track_master)):
     c.writerow("")
 
 
-print "DONE!"
+print "Done!"
