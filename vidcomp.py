@@ -98,7 +98,6 @@ def mediainfo_file(filename):
 print "---------------------------------------"
 print "FFPROBE output"
 probe_file(args.input)
-<<<<<<< HEAD
 print "---------------------------------------"
 mediainfo_file(args.input)
 
@@ -119,4 +118,3 @@ mediainfo_file(args.input)
 print "container",mediainfo_format
 print "video",mediainfo_video_track
 print "audio",mediainfo_audio_track
->>>>>>> FETCH_HEAD
