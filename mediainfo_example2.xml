@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mediainfo version="0.7.64">
+  <File>
+    <track type="General">
+      <Count>284</Count>
+      <StreamCount>1</StreamCount>
+      <StreamKind>General</StreamKind>
+      <StreamKind_String>General</StreamKind_String>
+      <StreamKindID>0</StreamKindID>
+      <VideoCount>1</VideoCount>
+      <AudioCount>8</AudioCount>
+      <OtherCount>2</OtherCount>
+      <Video_Format_List>AVC</Video_Format_List>
+      <Video_Format_WithHint_List>AVC</Video_Format_WithHint_List>
+      <Video_Codec_List>AVC</Video_Codec_List>
+      <Audio_Format_List>PCM / PCM / PCM / PCM / PCM / PCM / PCM / PCM</Audio_Format_List>
+      <Audio_Format_WithHint_List>PCM / PCM / PCM / PCM / PCM / PCM / PCM / PCM</Audio_Format_WithHint_List>
+      <Audio_Codec_List>PCM / PCM / PCM / PCM / PCM / PCM / PCM / PCM</Audio_Codec_List>
+      <Other_Format_List>MXF TC / SMPTE TC</Other_Format_List>
+      <Other_Format_WithHint_List>MXF TC / SMPTE TC</Other_Format_WithHint_List>
+      <CompleteName>/Users/hlep/Documents/AMIA_Hackday_2014/AMIA Hackday Sample files/A001C002_13102666.MXF</CompleteName>
+      <FolderName>/Users/hlep/Documents/AMIA_Hackday_2014/AMIA Hackday Sample files</FolderName>
+      <FileName>A001C002_13102666</FileName>
+      <FileExtension>MXF</FileExtension>
+      <Format>MXF</Format>
+      <Format_String>MXF</Format_String>
+      <Format_Extensions>mxf</Format_Extensions>
+      <Format_Commercial>MXF</Format_Commercial>
+      <Format_Profile>OP-1a</Format_Profile>
+      <Format_Settings>Closed / Complete</Format_Settings>
+      <InternetMediaType>application/mxf</InternetMediaType>
+      <Codec>MXF</Codec>
+      <Codec_String>MXF</Codec_String>
+      <Codec_Extensions>mxf</Codec_Extensions>
+      <Codec_Settings>Closed / Complete</Codec_Settings>
+      <FileSize>116096560</FileSize>
+      <FileSize_String>111 MiB</FileSize_String>
+      <FileSize_String1>111 MiB</FileSize_String1>
+      <FileSize_String2>111 MiB</FileSize_String2>
+      <FileSize_String3>111 MiB</FileSize_String3>
+      <FileSize_String4>110.7 MiB</FileSize_String4>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <OverallBitRate>101217576</OverallBitRate>
+      <OverallBitRate_String>101 Mbps</OverallBitRate_String>
+      <StreamSize>13281</StreamSize>
+      <StreamSize_String>13.0 KiB (0%)</StreamSize_String>
+      <StreamSize_String1>13 KiB</StreamSize_String1>
+      <StreamSize_String2>13 KiB</StreamSize_String2>
+      <StreamSize_String3>13.0 KiB</StreamSize_String3>
+      <StreamSize_String4>12.97 KiB</StreamSize_String4>
+      <StreamSize_String5>13.0 KiB (0%)</StreamSize_String5>
+      <StreamSize_Proportion>0.00011</StreamSize_Proportion>
+      <FooterSize>560</FooterSize>
+      <Encoded_Date>2013-10-29 13:20:44.000</Encoded_Date>
+      <File_Modified_Date>UTC 2014-10-08 15:28:20</File_Modified_Date>
+      <File_Modified_Date_Local>2014-10-08 11:28:20</File_Modified_Date_Local>
+      <Encoded_Application>Sony util 1.00</Encoded_Application>
+      <Encoded_Library_String>Sony util 1.00</Encoded_Library_String>
+      <Encoded_Library_Name>Sony util</Encoded_Library_Name>
+      <Encoded_Library_Version>1.00</Encoded_Library_Version>
+    </track>
+    <track type="Video">
+      <Count>267</Count>
+      <StreamCount>1</StreamCount>
+      <StreamKind>Video</StreamKind>
+      <StreamKind_String>Video</StreamKind_String>
+      <StreamKindID>0</StreamKindID>
+      <StreamOrder>0</StreamOrder>
+      <ID>2</ID>
+      <ID_String>2</ID_String>
+      <Format>AVC</Format>
+      <Format_Info>Advanced Video Codec</Format_Info>
+      <Format_Url>http://developers.videolan.org/x264.html</Format_Url>
+      <Format_Commercial>AVC</Format_Commercial>
+      <Format_Profile>High 4:2:2@L4.1</Format_Profile>
+      <Format_Settings_CABAC>No</Format_Settings_CABAC>
+      <Format_Settings_CABAC_String>No</Format_Settings_CABAC_String>
+      <Format_Settings_GOP>N=1</Format_Settings_GOP>
+      <Format_Settings_Wrapping>Frame</Format_Settings_Wrapping>
+      <InternetMediaType>video/H264</InternetMediaType>
+      <Codec>AVC</Codec>
+      <Codec_String>AVC</Codec_String>
+      <Codec_Family>AVC</Codec_Family>
+      <Codec_Info>Advanced Video Codec</Codec_Info>
+      <Codec_Url>http://developers.videolan.org/x264.html</Codec_Url>
+      <Codec_Profile>High 4:2:2@L4.1</Codec_Profile>
+      <Codec_Settings_CABAC>No</Codec_Settings_CABAC>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate>91991576</BitRate>
+      <BitRate_String>92.0 Mbps</BitRate_String>
+      <Width>1920</Width>
+      <Width_String>1920 pixel3</Width_String>
+      <Height>1080</Height>
+      <Height_String>1080 pixel3</Height_String>
+      <PixelAspectRatio>1.000</PixelAspectRatio>
+      <DisplayAspectRatio>1.778</DisplayAspectRatio>
+      <DisplayAspectRatio_String>16:9</DisplayAspectRatio_String>
+      <FrameRate>23.976</FrameRate>
+      <FrameRate_String>23.976 fps2</FrameRate_String>
+      <FrameCount>220</FrameCount>
+      <Standard>Component</Standard>
+      <Resolution>10</Resolution>
+      <Resolution_String>10 bit3</Resolution_String>
+      <Colorimetry>4:2:2</Colorimetry>
+      <ColorSpace>YUV</ColorSpace>
+      <ChromaSubsampling>4:2:2</ChromaSubsampling>
+      <BitDepth>10</BitDepth>
+      <BitDepth_String>10 bit3</BitDepth_String>
+      <ScanType>Progressive</ScanType>
+      <ScanType_String>Progressive</ScanType_String>
+      <Interlacement>PPF</Interlacement>
+      <Interlacement_String>Interlaced_PPF</Interlacement_String>
+      <Bits_Pixel_Frame_>1.850</Bits_Pixel_Frame_>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <StreamSize>105512527</StreamSize>
+      <StreamSize_String>101 MiB (91%)</StreamSize_String>
+      <StreamSize_String1>101 MiB</StreamSize_String1>
+      <StreamSize_String2>101 MiB</StreamSize_String2>
+      <StreamSize_String3>101 MiB</StreamSize_String3>
+      <StreamSize_String4>100.6 MiB</StreamSize_String4>
+      <StreamSize_String5>101 MiB (91%)</StreamSize_String5>
+      <StreamSize_Proportion>0.90883</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+      <colour_primaries>BT.709</colour_primaries>
+      <transfer_characteristics>BT.709</transfer_characteristics>
+      <matrix_coefficients>BT.709</matrix_coefficients>
+    </track>
+    <track type="Audio" streamid="1">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>0</StreamKindID>
+      <StreamKindPos>1</StreamKindPos>
+      <StreamOrder>1</StreamOrder>
+      <ID>3</ID>
+      <ID_String>3</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="2">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>1</StreamKindID>
+      <StreamKindPos>2</StreamKindPos>
+      <StreamOrder>2</StreamOrder>
+      <ID>4</ID>
+      <ID_String>4</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="3">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>2</StreamKindID>
+      <StreamKindPos>3</StreamKindPos>
+      <StreamOrder>3</StreamOrder>
+      <ID>5</ID>
+      <ID_String>5</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="4">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>3</StreamKindID>
+      <StreamKindPos>4</StreamKindPos>
+      <StreamOrder>4</StreamOrder>
+      <ID>6</ID>
+      <ID_String>6</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="5">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>4</StreamKindID>
+      <StreamKindPos>5</StreamKindPos>
+      <StreamOrder>5</StreamOrder>
+      <ID>7</ID>
+      <ID_String>7</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="6">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>5</StreamKindID>
+      <StreamKindPos>6</StreamKindPos>
+      <StreamOrder>6</StreamOrder>
+      <ID>8</ID>
+      <ID_String>8</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="7">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>6</StreamKindID>
+      <StreamKindPos>7</StreamKindPos>
+      <StreamOrder>7</StreamOrder>
+      <ID>9</ID>
+      <ID_String>9</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Audio" streamid="8">
+      <Count>223</Count>
+      <StreamCount>8</StreamCount>
+      <StreamKind>Audio</StreamKind>
+      <StreamKind_String>Audio</StreamKind_String>
+      <StreamKindID>7</StreamKindID>
+      <StreamKindPos>8</StreamKindPos>
+      <StreamOrder>8</StreamOrder>
+      <ID>10</ID>
+      <ID_String>10</ID_String>
+      <Format>PCM</Format>
+      <Format_Commercial>PCM</Format_Commercial>
+      <Format_Settings>Little</Format_Settings>
+      <Format_Settings_Endianness>Little</Format_Settings_Endianness>
+      <Format_Settings_Wrapping>Frame (AES)</Format_Settings_Wrapping>
+      <Codec>PCM</Codec>
+      <Codec_String>PCM</Codec_String>
+      <Codec_Family>PCM</Codec_Family>
+      <Codec_Settings>Little</Codec_Settings>
+      <Codec_Settings_Endianness>Little</Codec_Settings_Endianness>
+      <Duration>9176</Duration>
+      <Duration_String>9s 176ms</Duration_String>
+      <Duration_String1>9s 176ms</Duration_String1>
+      <Duration_String2>9s 176ms</Duration_String2>
+      <Duration_String3>00:00:09.176</Duration_String3>
+      <BitRate_Mode>CBR</BitRate_Mode>
+      <BitRate_Mode_String>CBR</BitRate_Mode_String>
+      <BitRate>1152000</BitRate>
+      <BitRate_String>1152 Kbps</BitRate_String>
+      <Channel_s_>1</Channel_s_>
+      <Channel_s__String>1 channel1</Channel_s__String>
+      <SamplingRate>48000</SamplingRate>
+      <SamplingRate_String>48.0 KHz</SamplingRate_String>
+      <SamplingCount>440448</SamplingCount>
+      <Resolution>24</Resolution>
+      <Resolution_String>24 bit2</Resolution_String>
+      <BitDepth>24</BitDepth>
+      <BitDepth_String>24 bit2</BitDepth_String>
+      <Delay>177333</Delay>
+      <Delay_String>2mn 57s</Delay_String>
+      <Delay_String1>2mn 57s 333ms</Delay_String1>
+      <Delay_String2>2mn 57s</Delay_String2>
+      <Delay_String3>00:02:57.333</Delay_String3>
+      <Delay_DropFrame>No</Delay_DropFrame>
+      <Delay_Source>Container</Delay_Source>
+      <Delay_Source_String>Container</Delay_Source_String>
+      <Video_Delay>0</Video_Delay>
+      <Video0_Delay>0</Video0_Delay>
+      <StreamSize>1321344</StreamSize>
+      <StreamSize_String>1.26 MiB (1%)</StreamSize_String>
+      <StreamSize_String1>1 MiB</StreamSize_String1>
+      <StreamSize_String2>1.3 MiB</StreamSize_String2>
+      <StreamSize_String3>1.26 MiB</StreamSize_String3>
+      <StreamSize_String4>1.260 MiB</StreamSize_String4>
+      <StreamSize_String5>1.26 MiB (1%)</StreamSize_String5>
+      <StreamSize_Proportion>0.01138</StreamSize_Proportion>
+      <Delay_SDTI>177334</Delay_SDTI>
+    </track>
+    <track type="Other" streamid="1">
+      <Count>58</Count>
+      <StreamCount>2</StreamCount>
+      <StreamKind>Other</StreamKind>
+      <StreamKind_String>Other</StreamKind_String>
+      <StreamKindID>0</StreamKindID>
+      <StreamKindPos>1</StreamKindPos>
+      <ID>1</ID>
+      <ID_String>1</ID_String>
+      <Type>Time code</Type>
+      <Format>MXF TC</Format>
+      <Format_Commercial>MXF TC</Format_Commercial>
+      <TimeCode_FirstFrame>00:02:57:08</TimeCode_FirstFrame>
+      <TimeCode_Settings>Striped</TimeCode_Settings>
+    </track>
+    <track type="Other" streamid="2">
+      <Count>58</Count>
+      <StreamCount>2</StreamCount>
+      <StreamKind>Other</StreamKind>
+      <StreamKind_String>Other</StreamKind_String>
+      <StreamKindID>1</StreamKindID>
+      <StreamKindPos>2</StreamKindPos>
+      <Type>Time code</Type>
+      <Format>SMPTE TC</Format>
+      <Format_Commercial>SMPTE TC</Format_Commercial>
+      <MuxingMode>SDTI</MuxingMode>
+      <TimeCode_FirstFrame>00:02:57:08</TimeCode_FirstFrame>
+    </track>
+  </File>
+</Mediainfo>

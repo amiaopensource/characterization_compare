@@ -18,6 +18,12 @@ c.writerow(["","FFPROBE","Mediainfo","Exiftool"])
 ffprobe_format = {'format_long_name':None, 'size':None, 'duration':None, 'bit_rate':None}
 ffprobe_video_track = {'codec_name':None, 'codec_tag_string':None, 'profile':None, 'display_aspect_ratio':None, 'r_frame_rate':None, 'pix_fmt':None}
 ffprobe_audio_track = {'codec_name':None, 'codec_tag_string':None, 'sample_rate':None, 'bits_per_sample':None, 'channels':None}
+# ===============
+# Mediainfo attributes
+mediainfo_format = {'Format':None, 'Format_Profile':None, 'FileSize':None, 'Duration_String':None, 'OverallBitRate_String':None}
+mediainfo_video_track = {'Format':None, 'CodecID':None, 'Format_Profile':None, 'DisplayAspectRatio':None, 'FrameRate':None, 'ChromaSubsampling':None, 'Resolution':None, 'ColorSpace':None}
+mediainfo_audio_track = {'Format':None, 'CodecID':None, 'Format_Profile':None, 'SamplingRate':None, 'AudioBitsPerSample':None, 'Channel_s_':None}
+
 
 # ===============
 # EXIFTOOL attributes
@@ -59,25 +65,40 @@ def probe_file(filename):
             for item in ffprobe_audio_track:
                 ffprobe_audio_track[item] = stream.attrib[item]
 
+# ===============
+# Mediainfo Harvesting
 def mediainfo_file(filename):
     cmnd = ['mediainfo', '-f', '--language=raw', '--Output=XML', filename]
     p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err =  p.communicate()
     root = ET.fromstring(out)
 
-    # ===============
-    # Mediainfo attributes
-    mediainfo_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
-    mediainfo_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
-    mediainfo_audio_track = ['codec_name', 'codec_tag_string', 'sample_rate', 'bits_per_sample', 'channels']
-
-    for elem in root.iterfind('format'):
-    	for item in ffprobe_format:
-    		print item + ": " + elem.attrib[item]
-
+    for file in root.iterfind('File'):
+    	for track in file.iterfind('track'):
+    	    if track.attrib['type'] == "General":
+    	        for item in mediainfo_format:
+    	            try:
+    	                mediainfo_format[item] = track.find(item).text
+    	            except AttributeError:
+    	                mediainfo_format[item] = "N/A"
+    	    if track.attrib['type'] == "Video":
+    	        for item in mediainfo_video_track:
+    	            try:
+    	                mediainfo_video_track[item] = track.find(item).text
+    	            except AttributeError:
+    	                 mediainfo_video_track[item] = "N/A"
+    	    if track.attrib['type'] == "Audio":
+    	        for item in mediainfo_audio_track:
+    	            try:
+    	                 mediainfo_audio_track[item] = track.find(item).text
+    	            except AttributeError:
+    	                mediainfo_audio_track[item] = "N/A"
+    	            
+    	            
 print "---------------------------------------"
 print "FFPROBE output"
 probe_file(args.input)
+<<<<<<< HEAD
 print "---------------------------------------"
 mediainfo_file(args.input)
 
@@ -88,3 +109,14 @@ print "audio",ffprobe_audio_track
 
 
 
+=======
+print "container",ffprobe_format
+print "video",ffprobe_video_track
+print "audio",ffprobe_audio_track
+print "---------------------------------------"
+print "Mediainfo output"
+mediainfo_file(args.input)
+print "container",mediainfo_format
+print "video",mediainfo_video_track
+print "audio",mediainfo_audio_track
+>>>>>>> FETCH_HEAD
