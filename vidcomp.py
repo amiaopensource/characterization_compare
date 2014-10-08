@@ -19,12 +19,21 @@ def probe_file(filename):
     # ===============
     # FFPROBE attributes
     ffprobe_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
+<<<<<<< HEAD
     ffprobe_
+=======
+    ffprobe_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
+    ffprobe_audio_track = ['codec_name', 'codec_tag_string', 'sample_rate', 'bits_per_sample', 'channels']
+>>>>>>> FETCH_HEAD
 
     for elem in root.iterfind('format'):
     	for item in ffprobe_format:
     		print item + ": " + elem.attrib[item]
 
+    for stream in root.iter('stream'):
+    	if stream.attrib['codec_type'] == "video":
+	    	for item in ffprobe_video_track:
+	    		print item + ": " + stream.attrib[item]
 
 probe_file(args.input)
 
