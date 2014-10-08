@@ -1,0 +1,40 @@
+,File Format,File Size,Duration,Overall bitrate
+ffprobe (2.4.2),MXF (Material eXchange Format),116096560,9.175833,101219418
+Media Info (0.7.64),MXF,116096560,9s 176ms,101 Mbps
+
+Video track 1,Video Codec,Codec Profile,Display Aspect Ratio,Frame Rate,Chroma Subsamplling,Bit Depth,Colorspace,Pixel format
+ffprobe (2.4.2),h264,High 4:2:2 Intra,16:9,24000/1001,yuv422p10le
+Media Info (0.7.64),AVC,High 4:2:2@L4.1,1.778,23.976,4:2:2,10,YUV
+
+Audio track 1,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 2,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 3,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 4,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 5,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 6,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 7,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
+Audio track 8,Audio Codec,Codec Profile,Sampling rate,Bit Depth,Number of Channels
+ffprobe (2.4.2),pcm_s24le,N/A,48000,24,1
+Media Info (0.7.64),PCM,N/A,48000,N/A,1
+
