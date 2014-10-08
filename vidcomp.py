@@ -20,9 +20,9 @@ ffprobe_video_track = {'codec_name':None, 'codec_tag_string':None, 'profile':Non
 ffprobe_audio_track = {'codec_name':None, 'codec_tag_string':None, 'sample_rate':None, 'bits_per_sample':None, 'channels':None}
 # ===============
 # Mediainfo attributes
-mediainfo_format = {'Format':None, 'Format_Profile':None, 'FileSize':None, 'Duration_String':None, 'OverallBitRate_String':None}
-mediainfo_video_track = {'Format':None, 'CodecID':None, 'Format_Profile':None, 'DisplayAspectRatio':None, 'FrameRate':None, 'ChromaSubsampling':None, 'Resolution':None, 'ColorSpace':None}
-mediainfo_audio_track = {'Format':None, 'CodecID':None, 'Format_Profile':None, 'SamplingRate':None, 'AudioBitsPerSample':None, 'Channel_s_':None}
+mediainfo_format_master = []
+mediainfo_video_track_master = []
+mediainfo_audio_track_master = []
 
 
 # ===============
@@ -76,23 +76,30 @@ def mediainfo_file(filename):
     for file in root.iterfind('File'):
     	for track in file.iterfind('track'):
     	    if track.attrib['type'] == "General":
+    	        mediainfo_format = {'Format':None, 'Format_Profile':None, 'FileSize':None, 'Duration_String':None, 'OverallBitRate_String':None}
     	        for item in mediainfo_format:
     	            try:
     	                mediainfo_format[item] = track.find(item).text
     	            except AttributeError:
     	                mediainfo_format[item] = "N/A"
+    	        mediainfo_format_master.append(mediainfo_format)
     	    if track.attrib['type'] == "Video":
+    	        mediainfo_video_track = {'Format':None, 'CodecID':None, 'Format_Profile':None, 'DisplayAspectRatio':None, 'FrameRate':None, 'ChromaSubsampling':None, 'Resolution':None, 'ColorSpace':None}
     	        for item in mediainfo_video_track:
     	            try:
     	                mediainfo_video_track[item] = track.find(item).text
     	            except AttributeError:
     	                 mediainfo_video_track[item] = "N/A"
+    	        mediainfo_video_track_master.append(mediainfo_video_track)
     	    if track.attrib['type'] == "Audio":
+    	        mediainfo_audio_track = {'Format':None, 'CodecID':None, 'Format_Profile':None, 'SamplingRate':None, 'AudioBitsPerSample':None, 'Channel_s_':None,'StreamKindPos':None}
     	        for item in mediainfo_audio_track:
     	            try:
     	                 mediainfo_audio_track[item] = track.find(item).text
     	            except AttributeError:
     	                mediainfo_audio_track[item] = "N/A"
+    	        mediainfo_audio_track_master.append(mediainfo_audio_track)
+    	        
     	            
     	            
 print "---------------------------------------"
@@ -115,6 +122,6 @@ print "audio",ffprobe_audio_track
 print "---------------------------------------"
 print "Mediainfo output"
 mediainfo_file(args.input)
-print "container",mediainfo_format
-print "video",mediainfo_video_track
-print "audio",mediainfo_audio_track
+print "container",mediainfo_format_master
+print "video",mediainfo_video_track_master
+print "audio",mediainfo_audio_track_master
