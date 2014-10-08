@@ -19,7 +19,7 @@ def probe_file(filename):
     # ===============
     # FFPROBE attributes
     ffprobe_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
-    ffprobe_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
+    ffprobe_
 
     for elem in root.iterfind('format'):
     	for item in ffprobe_format:
@@ -27,3 +27,22 @@ def probe_file(filename):
 
 
 probe_file(args.input)
+
+def mediainfo_file(filename):
+    cmnd = ['mediainfo', '-f', '--language=raw', '--Output=XML', filename]
+    p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err =  p.communicate()
+    root = ET.fromstring(out)
+
+    # ===============
+    # Mediainfo attributes
+    mediainfo_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
+    mediainfo_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
+    mediainfo_audio_track = []
+
+    for elem in root.iterfind('format'):
+    	for item in ffprobe_format:
+    		print item + ": " + elem.attrib[item]
+
+
+mediainfo_file(args.input)
