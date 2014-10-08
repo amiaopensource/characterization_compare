@@ -19,7 +19,7 @@ def probe_file(filename):
     # ===============
     # FFPROBE attributes
     ffprobe_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
-    ffprobe_
+    ffprobe_video_track = ['codec_name', 'codec_tag_string', 'profile', 'display_aspect_ratio', 'r_frame_rate', 'pix_fmt']
 
     for elem in root.iterfind('format'):
     	for item in ffprobe_format:
