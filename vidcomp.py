@@ -65,7 +65,7 @@ def probe_file(filename):
         ffprobe_format_master.append(ffprobe_format)
     for stream in root.iter('stream'):
     	if stream.attrib['codec_type'] == "video":
-            ffprobe_video_track = {'codec_name':None, 'profile':None, 'display_aspect_ratio':None, 'r_frame_rate':None, 'pix_fmt':None}
+            ffprobe_video_track = {'codec_name':None, 'profile':None, 'display_aspect_ratio':None, 'width':None,'height':None,'r_frame_rate':None, 'pix_fmt':None}
             for item in ffprobe_video_track:
                 ffprobe_video_track[item] = stream.attrib[item]
             ffprobe_video_track_master.append(ffprobe_video_track)
@@ -88,7 +88,7 @@ def mediainfo_file(filename):
     for file in root.iterfind('File'):
     	for track in file.iterfind('track'):
     	    if track.attrib['type'] == "General":
-    	        mediainfo_format = {'Format':None, 'Format_Profile':None, 'FileSize':None, 'Duration_String':None, 'OverallBitRate_String':None}
+    	        mediainfo_format = {'Format':None, 'Codec_Profile':None, 'FileSize':None, 'Duration':None, 'OverallBitRate':None}
     	        for item in mediainfo_format:
     	            try:
     	                mediainfo_format[item] = track.find(item).text
@@ -96,7 +96,7 @@ def mediainfo_file(filename):
     	                mediainfo_format[item] = "N/A"
     	        mediainfo_format_master.append(mediainfo_format)
     	    if track.attrib['type'] == "Video":
-    	        mediainfo_video_track = {'Format':None, 'Format_Profile':None, 'DisplayAspectRatio':None, 'FrameRate':None, 'ChromaSubsampling':None, 'Resolution':None, 'ColorSpace':None}
+    	        mediainfo_video_track = {'Codec':None, 'Codec_Profile':None, 'DisplayAspectRatio_String':None, 'Width':None, 'Height':None, 'FrameRate':None, 'ChromaSubsampling':None, 'Resolution':None, 'ColorSpace':None}
     	        for item in mediainfo_video_track:
     	            try:
     	                mediainfo_video_track[item] = track.find(item).text
@@ -104,7 +104,7 @@ def mediainfo_file(filename):
     	                 mediainfo_video_track[item] = "N/A"
     	        mediainfo_video_track_master.append(mediainfo_video_track)
     	    if track.attrib['type'] == "Audio":
-    	        mediainfo_audio_track = {'Format':None, 'Format_Profile':None, 'SamplingRate':None, 'AudioBitsPerSample':None, 'Channel_s_':None,'StreamKindPos':None}
+    	        mediainfo_audio_track = {'Codec':None, 'SamplingRate':None, 'AudioBitsPerSample':None, 'Channel_s_':None,'StreamKindPos':None}
     	        for item in mediainfo_audio_track:
     	            try:
     	                 mediainfo_audio_track[item] = track.find(item).text
@@ -137,21 +137,21 @@ for i in range(0,len(mediainfo_format_master)):
     ffList = ffprobe_format_master[i]
     c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['format_long_name'],ffList['size'],ffList['duration'],ffList['bit_rate']])
     miList = mediainfo_format_master[i]
-    c.writerow(["Media Info (" + mediainfo_version[0] + ")",miList['Format'],miList['FileSize'],miList['Duration_String'],miList['OverallBitRate_String']])
+    c.writerow(["Media Info (" + mediainfo_version[0] + ")",miList['Format'],miList['FileSize'],miList['Duration'],miList['OverallBitRate']])
     c.writerow("")
 for i in range(0,len(mediainfo_video_track_master)):
-    c.writerow(["Video track " + str(i + 1),"Video Codec","Codec Profile","Display Aspect Ratio","Frame Rate","Chroma Subsamplling","Bit Depth","Colorspace","Pixel format"])
+    c.writerow(["Video track " + str(i + 1),"Video Codec","Codec Profile","Display Aspect Ratio","Width","Height","Frame Rate","Chroma Subsamplling","Bit Depth","Colorspace","Pixel format"])
     ffList = ffprobe_video_track_master[i]
-    c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['codec_name'],ffList['profile'],ffList['display_aspect_ratio'],ffList['r_frame_rate'],ffList['pix_fmt']])
+    c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['codec_name'],ffList['profile'],ffList['display_aspect_ratio'],ffList['width'],ffList['height'],ffList['r_frame_rate'],ffList['pix_fmt']])
     miList = mediainfo_video_track_master[i]
-    c.writerow(["Media Info (" + mediainfo_version[0] + ")" ,miList['Format'],miList['Format_Profile'],miList['DisplayAspectRatio'],miList['FrameRate'],miList['ChromaSubsampling'],miList['Resolution'],miList['ColorSpace']])
+    c.writerow(["Media Info (" + mediainfo_version[0] + ")" ,miList['Codec'],miList['Codec_Profile'],miList['DisplayAspectRatio_String'],miList['Width'],miList['Height'],miList['FrameRate'],miList['ChromaSubsampling'],miList['Resolution'],miList['ColorSpace']])
     c.writerow("")
 for i in range(0,len(mediainfo_audio_track_master)):
-    c.writerow(["Audio track " + str(i + 1),"Audio Codec","Codec Profile","Sampling rate","Bit Depth","Number of Channels"])
+    c.writerow(["Audio track " + str(i + 1),"Audio Codec","Sampling rate","Bit Depth","Number of Channels"])
     ffList = ffprobe_audio_track_master[i]
     c.writerow(["ffprobe (" + ffprobe_version[0] + ")",ffList['codec_name'],'N/A',ffList['sample_rate'],ffList['bits_per_sample'],ffList['channels']])
     miList = mediainfo_audio_track_master[i]
-    c.writerow(["Media Info (" + mediainfo_version[0] + ")",miList['Format'],miList['Format_Profile'],miList['SamplingRate'],miList['AudioBitsPerSample'],miList['Channel_s_']])
+    c.writerow(["Media Info (" + mediainfo_version[0] + ")",miList['Codec'],miList['SamplingRate'],miList['AudioBitsPerSample'],miList['Channel_s_']])
     c.writerow("")
 
 
