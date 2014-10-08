@@ -9,6 +9,13 @@ parser = argparse.ArgumentParser(description="Python tool for comparing the outp
 parser.add_argument('-i', '--input', type=str, required=True, help='The full path to the file you want to analyze.')
 args = parser.parse_args()
 
+def get_version():
+	cmd = ['ffprobe', '-version']
+	p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	out = p.communicate()
+	print out[:15]
+
+get_version()
 
 def probe_file(filename):
     cmnd = ['ffprobe', '-show_format', '-show_streams', '-show_error', '-show_versions', '-print_format', 'xml', filename]
