@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import argparse, os, subprocess
+import argparse, os, subprocess, csv
 from subprocess import call
 import xml.etree.ElementTree as ET
 
@@ -11,7 +11,6 @@ args = parser.parse_args()
 
 csv_path = args.output
 c = csv.writer(open(csv_path, "wb"))
-c.writerow(["","FFPROBE","Mediainfo","Exiftool"])
 
 # ===============
 # FFPROBE attributes
@@ -124,3 +123,16 @@ mediainfo_file(args.input)
 print "container",mediainfo_format_master
 print "video",mediainfo_video_track_master
 print "audio",mediainfo_audio_track_master
+
+c.writerow(["","File Format","File Size","Duration","Overall bitrate"])
+c.writerow(["ffprobe",ffprobe_format['format_long_name'],ffprobe_format['size'],ffprobe_format['duration'],ffprobe_format['bit_rate']])
+
+
+'''
+
+write csv row with ffprobe format items
+
+
+'''
+
+
