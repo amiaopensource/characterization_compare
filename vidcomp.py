@@ -14,26 +14,16 @@ def probe_file(filename):
     cmnd = ['ffprobe', '-show_format', '-show_streams', '-show_error', '-show_versions', '-print_format', 'xml', filename]
     p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err =  p.communicate()
-    # print out
     root = ET.fromstring(out)
-    # print root
-    # print root.tag
-    # print root.attrib
-    print root.iter
-    # for child in root:
-    # 	print child.tag, child.attrib
 
+    # ===============
+    # FFPROBE attributes
+    ffprobe_format = ['format_name', 'format_long_name', 'size', 'duration', 'bit_rate']
+    ffprobe_
 
-'''
-list of children
+    for elem in root.iterfind('format'):
+    	for item in ffprobe_format:
+    		print item + ": " + elem.attrib[item]
 
-ffprobe: //format[@format_name]
-ffprobe: //format[@format_long_name]
-ffprobe: //format[@size]
-ffprobe: //format[@duration]
-ffprobe: //format[@bit_rate]
-
-
-'''
 
 probe_file(args.input)
