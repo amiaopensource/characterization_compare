@@ -22,7 +22,7 @@ ffprobe_audio_track = {'codec_name':None, 'codec_tag_string':None, 'sample_rate'
 mediainfo_format_master = []
 mediainfo_video_track_master = []
 mediainfo_audio_track_master = []
-
+mediainfo_version = ''
 
 # ===============
 # EXIFTOOL attributes
@@ -71,6 +71,9 @@ def mediainfo_file(filename):
     p = subprocess.Popen(cmnd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err =  p.communicate()
     root = ET.fromstring(out)
+
+    mediainfo_version = root.attrib['version']
+    
 
     for file in root.iterfind('File'):
     	for track in file.iterfind('track'):
