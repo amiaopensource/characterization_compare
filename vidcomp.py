@@ -1,17 +1,23 @@
 #!/usr/bin/env python
 
-import argparse, os, subprocess, csv
+import argparse, os, subprocess, csv, json, time, datetime
 from subprocess import call
 import xml.etree.ElementTree as ET
 from helpers import Search
-import json
 
 parser = argparse.ArgumentParser(description="Python tool for comparing the output of video characterization tools")
 parser.add_argument('-i', '--input', type=str, required=True, help='The full path to the file you want to analyze.')
 parser.add_argument('-o', '--output', type=str, required=True, help='where to put csv report')
 args = parser.parse_args()
 
-csv_path = args.output
+ts = time.time()
+st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+st = st.replace(" ","_")
+
+
+path, filename = os.path.split(args.input)
+
+csv_path = args.output+filename+"---char_compare---"+st+".csv"
 c = csv.writer(open(csv_path, "wb"))
 
 # ===============
@@ -216,6 +222,8 @@ print "Done!"
 # print "audio", exiftool_audio_track
 
 print "Generating CSV Report..."
+c.writerow(["Report on:", args.input])
+c.writerow("")
 c.writerow(["", "File Format", "File Size", "Duration", "Overall bitrate"])
 
 for i in range(0, len(mediainfo_format_master)):
@@ -259,3 +267,4 @@ for i in range(0, len(mediainfo_audio_track_master)):
     c.writerow("")
 
 print "Done!"
+print "Find report at "+csv_path
