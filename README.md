@@ -11,7 +11,7 @@ Command line arguments:
 ```
 
 
-[Made for AMIA 2014 hack day]. More info [here]
+[Made for AMIA 2014 hack day]. More info [here].
 
 
 [Made for AMIA 2014 hack day]:http://wiki.curatecamp.org/index.php/Association_of_Moving_Image_Archivists_%26_Digital_Library_Federation_Hack_Day_2014
