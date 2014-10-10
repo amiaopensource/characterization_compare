@@ -1,7 +1,7 @@
 
 characterization compare
 =========
-Runs ffprobe and MediaInfo and presents their output in a CSV report, for purpose of comparing conflicting information.
+Runs FFprobe | MediaInfo | ExifTool and presents their output in a CSV report, for purpose of comparing conflicting information.
 
 Command line arguments:
 
